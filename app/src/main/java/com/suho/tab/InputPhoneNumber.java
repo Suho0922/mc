@@ -12,7 +12,6 @@ import androidx.fragment.app.FragmentManager;
 
 public class InputPhoneNumber extends AppCompatActivity {
 
-    FragMonday Add;
     //String NAME = "NULL";
     //String PHONE_NUMBER = "NULL";
 
@@ -25,9 +24,14 @@ public class InputPhoneNumber extends AppCompatActivity {
     public void btn_Click2(View view) {
         EditText editText1 = (EditText)findViewById(R.id.editText1);
         EditText editText2 = (EditText)findViewById(R.id.editText2);
+
         //NAME = editText1.getText().toString();
         //PHONE_NUMBER = editText2.getText().toString();
-        Add.addItem(ContextCompat.getDrawable(this, R.drawable.ic_account_test1), editText1.getText().toString(), editText2.getText().toString());
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        FragMonday tlqkf = (FragMonday) fragmentManager.findFragmentById(R.id.fragmonday);
+        tlqkf.addItem(ContextCompat.getDrawable(this, R.drawable.ic_account_test1), editText1.getText().toString(), editText2.getText().toString());
 
         /**********************************************
         FragMonday NewInfo = (FragMonday) getSupportFragmentManager().findFragmentById(R.id.fragmonday);
@@ -43,9 +47,4 @@ public class InputPhoneNumber extends AppCompatActivity {
         startActivity(intent);
     }
 
-    FragmentManager fragmentManager = getSupportFragmentManager();
-    FragMonday tlqkf = (FragMonday) fragmentManager.findFragmentById(R.id.fragmonday);
-
-     //ddfasjiejf;aisejf;ilsjfiisfejl
-    //21323123
 }
