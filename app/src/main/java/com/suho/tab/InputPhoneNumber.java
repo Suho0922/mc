@@ -47,4 +47,5 @@ public class InputPhoneNumber extends AppCompatActivity {
     FragMonday tlqkf = (FragMonday) fragmentManager.findFragmentById(R.id.fragmonday);
 
      //ddfasjiejf;aisejf;ilsjfiisfejl
+    //21323123
 }
