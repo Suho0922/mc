@@ -51,7 +51,7 @@ public class FragWednesday extends Fragment {
                     if (random < 1d) {
                         textView3.setText("너무 안좋습니다. 그만두십시오.");
                     } else if (random < 3d) {
-                        textView3.setText("그저 그렇습니다. 굳이...?");
+                        textView3.setText("그저 그렇습니다. 굳이 경마를...?");
                     } else if (random < 7d) {
                         textView3.setText("평범합니다.");
                     } else if (random < 9d) {
@@ -85,10 +85,15 @@ public class FragWednesday extends Fragment {
 
                 //베팅금액 변환
                 String betbet = editText.getText().toString();
-                int betmoney = Integer.parseInt(betbet);
+                int betmoney;
+                if (betbet.length() != 0) {
+                    betmoney = Integer.parseInt(betbet);
+                } else {
+                    betmoney = 0;
+                }
 
                 //베팅 못할 시
-                if (betbet.length() == 0 || Money <= betmoney) {
+                if (editText.getText().toString().length() == 0 || Money <= betmoney) {
                     Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_SHORT).show();
 
                 //베팅 시작하면 GungMa 로 intent 전환
@@ -105,11 +110,16 @@ public class FragWednesday extends Fragment {
         buttonB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                EditText editText = (EditText)view.findViewById(R.id.BetEditText);  //베팅금액 받기
+                EditText editText = (EditText)view.findViewById(R.id.BetEditText);  //베팅금액
 
                 //베팅금액 변환
                 String betbet = editText.getText().toString();
-                int betmoney = Integer.parseInt(betbet);
+                int betmoney;
+                if (betbet.length() != 0) {
+                    betmoney = Integer.parseInt(betbet);
+                } else {
+                    betmoney = 0;
+                }
 
                 //베팅 못할 시
                 if (betbet.length() == 0 || Money <= betmoney) {
@@ -133,7 +143,12 @@ public class FragWednesday extends Fragment {
 
                 //베팅금액 변환
                 String betbet = editText.getText().toString();
-                int betmoney = Integer.parseInt(betbet);
+                int betmoney;
+                if (betbet.length() != 0) {
+                    betmoney = Integer.parseInt(betbet);
+                } else {
+                    betmoney = 0;
+                }
 
                 //베팅 못할 시
                 if (betbet.length() == 0 || Money <= betmoney) {
@@ -157,7 +172,12 @@ public class FragWednesday extends Fragment {
 
                 //베팅금액 변환
                 String betbet = editText.getText().toString();
-                int betmoney = Integer.parseInt(betbet);
+                int betmoney;
+                if (betbet.length() != 0) {
+                    betmoney = Integer.parseInt(betbet);
+                } else {
+                    betmoney = 0;
+                }
 
                 //베팅 못할 시
                 if (betbet.length() == 0 || Money <= betmoney) {
@@ -181,7 +201,12 @@ public class FragWednesday extends Fragment {
 
                 //베팅금액 변환
                 String betbet = editText.getText().toString();
-                int betmoney = Integer.parseInt(betbet);
+                int betmoney;
+                if (betbet.length() != 0) {
+                    betmoney = Integer.parseInt(betbet);
+                } else {
+                    betmoney = 0;
+                }
 
                 //베팅 못할 시
                 if (betbet.length() == 0 || Money <= betmoney) {
@@ -197,7 +222,6 @@ public class FragWednesday extends Fragment {
                 }
             }
         });
-
 
         return view;
     }

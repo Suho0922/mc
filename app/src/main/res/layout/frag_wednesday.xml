@@ -12,7 +12,7 @@
         android:layout_height="80dp"
         android:background="@drawable/speech_bubble"
         android:onClick="btn_Click3"
-        android:text="신년운세는!?!?"
+        android:text="신년운세는!?!?    (복채 : 200 \)"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -49,17 +49,17 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textViewA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2배"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintTop_toBottomOf="@+id/textViewAA" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textViewAA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="적토마"
@@ -90,17 +90,17 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textViewB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3배"
+                    android:text="5배"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintTop_toBottomOf="@+id/textViewBB" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textViewBB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="조랑말"
@@ -130,17 +130,17 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textViewC"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5배"
+                    android:text="3배"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCC" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textViewCC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="백마"
@@ -171,17 +171,17 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textViewD"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="13배"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDD" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textViewDD"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="당나귀"
@@ -211,17 +211,17 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textViewE"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="30배"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintTop_toBottomOf="@+id/textViewEE" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textViewEE"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="트로이목마"
