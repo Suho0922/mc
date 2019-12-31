@@ -71,7 +71,7 @@ public class FragMonday extends ListFragment {
         super.onPause();
 
     }
-
+//21312
     public void addItem(Drawable icon, String title, String desc) {
         adapter.addItem(icon, title, desc) ;
     }
