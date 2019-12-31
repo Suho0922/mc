@@ -11,10 +11,10 @@ public class ListViewItem {
         iconDrawable = icon ;
     }
     public void setTitle(String title) {
-        titleStr = title ;
+        this.titleStr = title ;
     }
     public void setDesc(String desc) {
-        descStr = desc ;
+        this.descStr = desc ;
     }
 
     public Drawable getIcon() {

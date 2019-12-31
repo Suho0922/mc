@@ -9,12 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.ListFragment;
 
 
@@ -42,8 +44,50 @@ public class FragMonday extends ListFragment {
         // 세 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test3), "Jung", "010-3333-4444");
 
+        Bundle extra = getArguments();
+        if(extra != null) {
+            //extra = getArguments();
+            String NAME = extra.getString("NAME");
+            String PHONE_NUMBER = extra.getString("PHONE_NUMBER");
+
+            addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test1), NAME, PHONE_NUMBER);
+        }
+
         return super.onCreateView(inflater, container, savedInstanceState);
     }
+
+    @Override
+    public void onPause(){
+
+        Bundle extra = getArguments();
+        if(extra != null) {
+            //extra = getArguments();
+            String NAME = extra.getString("NAME");
+            String PHONE_NUMBER = extra.getString("PHONE_NUMBER");
+
+            addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test1), NAME, PHONE_NUMBER);
+        }
+
+        super.onPause();
+
+    }
+
+    public void addItem(Drawable icon, String title, String desc) {
+        adapter.addItem(icon, title, desc) ;
+    }
+
+    /************
+    public void onSaveInstanceState(Bundle bundle){
+        Bundle extra = getArguments();
+        if(extra != null){
+            //extra = getArguments();
+            String NAME = extra.getString("NAME");
+            String PHONE_NUMBER = extra.getString("PHONE_NUMBER");
+
+            addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test1), NAME, PHONE_NUMBER);
+        }
+    }
+     *************/
 
     /******************************************************
      * 혹시 모를 클릭 이벤트 처리를 위하여
@@ -60,8 +104,5 @@ public class FragMonday extends ListFragment {
     }
     ********************************************************/
 
-    public void addItem(Drawable icon, String title, String desc) {
-            adapter.addItem(icon, title, desc) ;
-    }
 }
 
