@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/seonangdang">
+    android:background="@drawable/seonangdang"
+    >
 
     <Button
         android:id="@+id/goToFragWed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="500dp"
-        android:text="Button"
+        android:text="경마장으로"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="174dp" />
 
