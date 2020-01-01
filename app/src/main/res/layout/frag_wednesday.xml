@@ -31,19 +31,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="#70423D3D"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/buttonA"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:background="@drawable/horse1"
                 android:backgroundTint="#9C3D3D"
-                android:textColor="#FFFFFF"
-                android:text="A" />
+                android:text="A"
+                android:textColor="#FFFFFF" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:text="2배 (45%)"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewAA" />
 
@@ -65,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:text="적토마"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,17 +75,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="#70423D3D"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/buttonC"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:background="@drawable/horse3"
-                android:textColor="#FFFFFF"
-                android:text="B" />
+                android:text="B"
+                android:textColor="#FFFFFF" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:text="백마"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,17 +116,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="#70423D3D"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/buttonB"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:background="@drawable/horse4"
-                android:textColor="#FFFFFF"
-                android:text="C" />
+                android:text="C"
+                android:textColor="#FFFFFF" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -148,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:text="조랑말"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -157,18 +157,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="#70423D3D"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/buttonD"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:background="@drawable/horse2"
-                android:textColor="#FFFFFF"
-                android:text="D" />
+                android:text="D"
+                android:textColor="#FFFFFF" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -180,7 +180,7 @@
                     android:layout_height="wrap_content"
                     android:text="13배(7%)"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewDD" />
 
@@ -190,7 +190,7 @@
                     android:layout_height="wrap_content"
                     android:text="당나귀"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -199,17 +199,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="#70423D3D"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/buttonE"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:background="@drawable/horse5"
-                android:textColor="#FFFFFF"
-                android:text="E" />
+                android:text="E"
+                android:textColor="#FFFFFF" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -221,7 +221,7 @@
                     android:layout_height="wrap_content"
                     android:text="30배"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewEE" />
 
@@ -231,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:text="트로이목마(3%)"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

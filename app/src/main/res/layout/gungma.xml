@@ -19,6 +19,7 @@
             android:layout_width="80dp"
             android:layout_height="96dp"
             android:layout_gravity="left"
+            android:layout_weight="1"
             android:background="@drawable/horse1"
             android:backgroundTint="#9C3D3D" />
 
@@ -49,7 +50,7 @@
         <ImageView
             android:id="@+id/ddd"
             android:layout_width="80dp"
-            android:layout_height="96dp"
+            android:layout_height="50dp"
             android:layout_gravity="left"
             android:layout_weight="1"
             app:srcCompat="@drawable/horse5" />
@@ -58,7 +59,7 @@
             android:id="@+id/btn_right"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="80dp"
-            android:layout_height="50dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:text="시작" />
 
