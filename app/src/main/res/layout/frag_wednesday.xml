@@ -12,7 +12,7 @@
         android:layout_height="80dp"
         android:background="@drawable/speech_bubble"
         android:onClick="btn_Click3"
-        android:text="신년운세는!?!?\n(복채 : 200 \)"
+        android:text="신년부적뽑기\n(복채 : 200 \)"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

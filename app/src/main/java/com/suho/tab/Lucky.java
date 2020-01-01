@@ -56,8 +56,6 @@ public class Lucky extends AppCompatActivity {
                 B.startAnimation((remove));
                 soso.startAnimation((remove));
                 G.startAnimation((remove));
-                GG.startAnimation((remove));
-
                 chi.setVisibility(View.VISIBLE);
                 chi.startAnimation((bujuk));
                 break;
@@ -66,7 +64,6 @@ public class Lucky extends AppCompatActivity {
                 B.startAnimation((chose2));
                 soso.startAnimation((remove));
                 G.startAnimation((remove));
-                GG.startAnimation((remove));
                 hap.setVisibility(View.VISIBLE);
                 hap.startAnimation((bujuk));
                 break;
@@ -75,7 +72,6 @@ public class Lucky extends AppCompatActivity {
                 B.startAnimation((remove));
                 soso.startAnimation((chose3));
                 G.startAnimation((remove));
-                GG.startAnimation((remove));
                 dae.setVisibility(View.VISIBLE);
                 dae.startAnimation((bujuk));
                 break;
@@ -84,7 +80,6 @@ public class Lucky extends AppCompatActivity {
                 B.startAnimation((remove));
                 soso.startAnimation((remove));
                 G.startAnimation((chose4));
-                GG.startAnimation((remove));
                 gwang.setVisibility(View.VISIBLE);
                 gwang.startAnimation((bujuk));
                 break;

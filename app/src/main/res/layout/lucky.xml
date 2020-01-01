@@ -52,8 +52,8 @@
 
     <TextView
         android:id="@+id/chighik"
-        android:layout_width="0dp"
-        android:layout_height="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#70FFFFFF"
         android:gravity="center"
         android:text="취직부적을 뽑으셨군요! \n올해에는 꼭 이루던 꿈이 이뤄지고 \n지원한 곳  어디든 취직 하실거에요!"
