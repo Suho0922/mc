@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class GungMa extends AppCompatActivity {
 
+    static int MoneyR;
+
     ImageView horse1;
     ImageView horse2;
     ImageView horse3;
@@ -172,18 +174,18 @@ public class GungMa extends AppCompatActivity {
 
 
 
+        MoneyR = Money;
         Button turn_back_button = (Button) findViewById(R.id.tung_back_button);
 
         turn_back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent intentMoney = new Intent();
+                intentMoney.putExtra("MoneyI", MoneyR);
+                setResult(RESULT_OK, intentMoney);
                 finish();
             }
         });
-
-
-
 
     }
 }

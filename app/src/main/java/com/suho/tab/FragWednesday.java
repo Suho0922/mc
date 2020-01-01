@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -25,10 +26,28 @@ public class FragWednesday extends Fragment {
 
     private Context context;
     static int Money = 2000;
+    public static final int REQUEST_CODE_GUNGMA = 101;
 
     public static FragWednesday newinstance(){
         FragWednesday fragWednesday = new FragWednesday();
         return fragWednesday;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == REQUEST_CODE_GUNGMA){
+            int money = data.getExtras().getInt("MoneyI");
+            Toast.makeText(getActivity(),"경마장에 돌아오신걸 환영합니다^^ 현재 소지금액은 "+ money, Toast.LENGTH_LONG).show();
+            TextView moneyView;
+            Money = money;
+
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+            ft.detach(this).attach(this).commit();
+        }
+
     }
 
     @Override
@@ -60,6 +79,10 @@ public class FragWednesday extends Fragment {
                         textView3.setText("대박입니다. 빨리 경마하러가세요");
                     Money -= 200;
                 }
+                //((MainActivity)getActivity()).refresh();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+                ft.detach(FragWednesday.newinstance()).attach(FragWednesday.newinstance()).commit();
             }
         });
 
@@ -93,7 +116,7 @@ public class FragWednesday extends Fragment {
                 }
 
                 //베팅 못할 시
-                if (editText.getText().toString().length() == 0 || Money <= betmoney) {
+                if (editText.getText().toString().length() == 0 || Money < betmoney) {
                     Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_SHORT).show();
 
                 //베팅 시작하면 GungMa 로 intent 전환
@@ -102,7 +125,7 @@ public class FragWednesday extends Fragment {
                     intentA.putExtra("money", Money);  // 가지고 있는 돈 발송준비
                     intentA.putExtra("horse", 1);  // 고른말 발송준비
                     intentA.putExtra("bet", betmoney);  // 베팅금액 발송준비
-                    getActivity().startActivity(intentA);  // 발송
+                    startActivityForResult(intentA, REQUEST_CODE_GUNGMA);  // 발송
                 }
             }
         });
@@ -131,7 +154,7 @@ public class FragWednesday extends Fragment {
                     intentA.putExtra("money", Money);  // 가지고 있는 돈 발송준비
                     intentA.putExtra("horse", 2);  // 고른말 발송준비
                     intentA.putExtra("bet", betmoney);  // 베팅금액 발송준비
-                    getActivity().startActivity(intentA);  // 발송
+                    startActivityForResult(intentA, REQUEST_CODE_GUNGMA);  // 발송
                 }
             }
         });
@@ -160,7 +183,7 @@ public class FragWednesday extends Fragment {
                     intentA.putExtra("money", Money);  // 가지고 있는 돈 발송준비
                     intentA.putExtra("horse", 3);  // 고른말 발송준비
                     intentA.putExtra("bet", betmoney);  // 베팅금액 발송준비
-                    getActivity().startActivity(intentA);  // 발송
+                    startActivityForResult(intentA, REQUEST_CODE_GUNGMA);  // 발송
                 }
             }
         });
@@ -189,7 +212,7 @@ public class FragWednesday extends Fragment {
                     intentA.putExtra("money", Money);  // 가지고 있는 돈 발송준비
                     intentA.putExtra("horse", 4);  // 고른말 발송준비
                     intentA.putExtra("bet", betmoney);  // 베팅금액 발송준비
-                    getActivity().startActivity(intentA);  // 발송
+                    startActivityForResult(intentA, REQUEST_CODE_GUNGMA);  // 발송
                 }
             }
         });
@@ -218,7 +241,7 @@ public class FragWednesday extends Fragment {
                     intentA.putExtra("money", Money);  // 가지고 있는 돈 발송준비
                     intentA.putExtra("horse", 5);  // 고른말 발송준비
                     intentA.putExtra("bet", betmoney);  // 베팅금액 발송준비
-                    getActivity().startActivity(intentA);  // 발송
+                    startActivityForResult(intentA, REQUEST_CODE_GUNGMA);  // 발송
                 }
             }
         });

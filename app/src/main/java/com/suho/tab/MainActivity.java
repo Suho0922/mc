@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(InputPhoneNumber);
         //show();
     }
+
+    public void refresh(){
+        fragmentPagerAdapter.notifyDataSetChanged();
+    }
 /*******
     void show()
     {
