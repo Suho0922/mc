@@ -117,17 +117,12 @@ public class FragWednesday extends Fragment {
                         intent.putExtra("BOKCHAE", Money);
                         startActivityForResult(intent, REQUEST_CODE_WUNSE);
 
-                    } else if (random < 9d) {
+                    } else  {
                         Intent intent = new Intent(getActivity(), Lucky.class);
                         intent.putExtra("LUCKY", 4);
                         intent.putExtra("BOKCHAE", Money);
                         startActivityForResult(intent, REQUEST_CODE_WUNSE);
 
-                    } else {
-                        Intent intent = new Intent(getActivity(), Lucky.class);
-                        intent.putExtra("LUCKY", 5);
-                        intent.putExtra("BOKCHAE", Money);
-                        startActivityForResult(intent, REQUEST_CODE_WUNSE);
                     }
                 }
                 //((MainActivity)getActivity()).refresh();   refresh try3
