@@ -47,7 +47,7 @@ public class GungMa extends AppCompatActivity {
 
 
         // 이기는 말
-        int WinnerHorse;
+        final int WinnerHorse;
         double random = Math.random() * 100d;
         if (random > 60d) {
             WinnerHorse = 1;
@@ -91,15 +91,9 @@ public class GungMa extends AppCompatActivity {
         final Animation horse5move = AnimationUtils.loadAnimation(this,R.anim.horse_move5);
 
 
-
         //애니메이션
-        //mImgView1 = (ImageView) findViewById(R.id.aaa);
-
-        //final Animation animTransRight = AnimationUtils.loadAnimation(this,R.anim.anim_translate_right);
 
         Button btnRight = (Button) findViewById(R.id.btn_right);
-
-
 
                 switch (WinnerHorse) {
                     case 1:
@@ -114,6 +108,7 @@ public class GungMa extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case 2:
                         btnRight.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -126,6 +121,7 @@ public class GungMa extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case 3:
                         btnRight.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -138,6 +134,7 @@ public class GungMa extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case 4:
                         btnRight.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -150,6 +147,7 @@ public class GungMa extends AppCompatActivity {
                             }
                         });
                         break;
+
                     case 5:
                         btnRight.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -161,19 +159,13 @@ public class GungMa extends AppCompatActivity {
                                 horse3.startAnimation((horse5move));
                             }
                         });
-
-
                         break;
+
                     default:
                         break;
                 }
 
-               // mImgView.startAnimation((animTransRight));
-
-
-
-
-
+        //결과값 전송
         MoneyR = Money;
         Button turn_back_button = (Button) findViewById(R.id.tung_back_button);
 
@@ -182,6 +174,7 @@ public class GungMa extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentMoney = new Intent();
                 intentMoney.putExtra("MoneyI", MoneyR);
+                intentMoney.putExtra("HorseI", WinnerHorse);
                 setResult(RESULT_OK, intentMoney);
                 finish();
             }

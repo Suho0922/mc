@@ -1,8 +1,6 @@
 package com.suho.tab;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,9 +15,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class FragWednesday extends Fragment {
@@ -39,15 +34,39 @@ public class FragWednesday extends Fragment {
 
         if(requestCode == REQUEST_CODE_GUNGMA){
             int money = data.getExtras().getInt("MoneyI");
-            Toast.makeText(getActivity(),"경마장에 돌아오신걸 환영합니다^^ 현재 소지금액은 "+ money, Toast.LENGTH_LONG).show();
-            TextView moneyView;
+            int horse = data.getExtras().getInt("HorseI");
+            String Cheer;
+            String Win;
+
+            if (money > Money){
+                Cheer = "이겼습니다!!!";
+            } else {
+                Cheer = "돈을 잃으셨습니다";
+            }
+
+            switch (horse){
+                case 1 :
+                    Win = "역시 적토마군요!";
+                    break;
+                case 2 :
+                    Win = "백마 참 좋은 말이죠";
+                    break;
+                case 3 :
+                    Win = "조랑말이 힘을 냈군요!";
+                    break;
+                case 4 :
+                    Win = "역시 신토불이죠!";
+                    break;
+                default:
+                    Win = "승부조작을 의심해봐야겠군요";
+            }
+            Toast.makeText(getActivity(),Cheer + "\n" + Win + "\n 현재 소지금액은 "+ money, Toast.LENGTH_SHORT).show();
+
             Money = money;
 
             FragmentTransaction ft = getFragmentManager().beginTransaction();
-
             ft.detach(this).attach(this).commit();
         }
-
     }
 
     @Override

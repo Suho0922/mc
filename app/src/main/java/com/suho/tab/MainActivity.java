@@ -26,7 +26,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FragmentPagerAdapter fragmentPagerAdapter;
+    private viewPagerAdapter fragmentPagerAdapter;
 
 
     @Override
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(fragmentPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        //FragMonday customListFrgmt = (FragMonday) getSupportFragmentManager().findFragmentById(R.id.fragmonday);
-        //ListViewAdapter LV = new ListViewAdapter();
-        //customListFrgmt.addItem(ContextCompat.getDrawable(this, R.drawable.ic_account_test1), "New Box", "New Account Box Black 36dp") ;
+        //FragMonday addFragment = (FragMonday) getSupportFragmentManager().findFragmentById(R.id.fragmonday);
+        //addFrgment.addItem(ContextCompat.getDrawable(this, R.drawable.ic_account_test1), "New Box", "New Account Box Black 36dp") ;
+        //fragmentPagerAdapter.
         }
 
     public void btn_Click1(View view){

@@ -28,7 +28,7 @@
             android:layout_height="120dp"
             android:layout_gravity="left"
             android:layout_weight="1"
-            app:srcCompat="@drawable/horse2" />
+            app:srcCompat="@drawable/horse3" />
 
         <ImageView
             android:id="@+id/ccc"
@@ -36,7 +36,7 @@
             android:layout_height="120dp"
             android:layout_gravity="left"
             android:layout_weight="1"
-            app:srcCompat="@drawable/horse3" />
+            app:srcCompat="@drawable/horse2" />
 
         <ImageView
             android:id="@+id/eee"
