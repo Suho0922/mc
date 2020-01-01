@@ -40,7 +40,7 @@ public class Lucky extends AppCompatActivity {
 
         switch (LUCKY) {
             case 1:
-                BB.startAnimation((chose1));
+                BB.startAnimation((remove));
                 B.startAnimation((remove));
                 soso.startAnimation((remove));
                 G.startAnimation((remove));
@@ -68,7 +68,7 @@ public class Lucky extends AppCompatActivity {
                 GG.startAnimation((remove));
                 break;
             default:
-                BB.startAnimation((remove));
+                BB.startAnimation((chose1));
                 B.startAnimation((remove));
                 soso.startAnimation((remove));
                 G.startAnimation((remove));
