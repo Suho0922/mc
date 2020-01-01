@@ -22,6 +22,7 @@ public class FragWednesday extends Fragment {
     private Context context;
     static int Money = 2000;
     public static final int REQUEST_CODE_GUNGMA = 101;
+    public static final int REQUEST_CODE_WUNSE = 1004;
 
     public static FragWednesday newinstance(){
         FragWednesday fragWednesday = new FragWednesday();
@@ -32,6 +33,7 @@ public class FragWednesday extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        //경마하고 오면
         if(requestCode == REQUEST_CODE_GUNGMA){
             int money = data.getExtras().getInt("MoneyI");
             int horse = data.getExtras().getInt("HorseI");
@@ -55,12 +57,24 @@ public class FragWednesday extends Fragment {
                     Win = "조랑말이 힘을 냈군요!";
                     break;
                 case 4 :
-                    Win = "역시 신토불이죠!";
+                    Win = "역시 신토불이 제주도 당나귀입니다!";
                     break;
                 default:
                     Win = "승부조작을 의심해봐야겠군요";
             }
             Toast.makeText(getActivity(),Cheer + "\n" + Win + "\n 현재 소지금액은 "+ money, Toast.LENGTH_SHORT).show();
+
+            Money = money;
+
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            ft.detach(this).attach(this).commit();
+        }
+
+        // 운세보고 오면
+        if(requestCode == REQUEST_CODE_WUNSE){
+            int money = data.getExtras().getInt("BOKCHAE");
+
+            Toast.makeText(getActivity(),"복채 감사합니다 :)", Toast.LENGTH_SHORT).show();
 
             Money = money;
 
@@ -75,9 +89,8 @@ public class FragWednesday extends Fragment {
         context = container.getContext();
         TextView textView;
 
-
         Button button3 = (Button) view.findViewById(R.id.button3);
-        final TextView textView3 = (TextView)view.findViewById(R.id.textView3);
+        //final TextView textView3 = (TextView)view.findViewById(R.id.textView3);
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,24 +100,41 @@ public class FragWednesday extends Fragment {
                 } else  {
                     double random = Math.random() * 10d;
                     if (random < 1d) {
-                        textView3.setText("너무 안좋습니다. 그만두십시오.");
-                    } else if (random < 3d) {
-                        textView3.setText("그저 그렇습니다. 굳이 경마를...?");
-                    } else if (random < 7d) {
-                        textView3.setText("평범합니다.");
-                    } else if (random < 9d) {
-                        textView3.setText("운이 조금 보이는군요");
-                    } else
-                        textView3.setText("대박입니다. 빨리 경마하러가세요");
-                    Money -= 200;
-                }
-                //((MainActivity)getActivity()).refresh();
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                        Intent intent = new Intent(getActivity(), Lucky.class);        // 인텐트 준비
+                        intent.putExtra("LUCKY", 1);                    // 운세발송
+                        intent.putExtra("BOKCHAE", Money);
+                        startActivityForResult(intent, REQUEST_CODE_WUNSE);
 
-                ft.detach(FragWednesday.newinstance()).attach(FragWednesday.newinstance()).commit();
+                    } else if (random < 3d) {
+                        Intent intent = new Intent(getActivity(), Lucky.class);
+                        intent.putExtra("LUCKY", 2);
+                        intent.putExtra("BOKCHAE", Money);
+                        startActivityForResult(intent, REQUEST_CODE_WUNSE);
+
+                    } else if (random < 7d) {
+                        Intent intent = new Intent(getActivity(), Lucky.class);
+                        intent.putExtra("LUCKY", 3);
+                        intent.putExtra("BOKCHAE", Money);
+                        startActivityForResult(intent, REQUEST_CODE_WUNSE);
+
+                    } else if (random < 9d) {
+                        Intent intent = new Intent(getActivity(), Lucky.class);
+                        intent.putExtra("LUCKY", 4);
+                        intent.putExtra("BOKCHAE", Money);
+                        startActivityForResult(intent, REQUEST_CODE_WUNSE);
+
+                    } else {
+                        Intent intent = new Intent(getActivity(), Lucky.class);
+                        intent.putExtra("LUCKY", 5);
+                        intent.putExtra("BOKCHAE", Money);
+                        startActivityForResult(intent, REQUEST_CODE_WUNSE);
+                    }
+                }
+                //((MainActivity)getActivity()).refresh();   refresh try3
+                //FragmentTransaction ft = getFragmentManager().beginTransaction();   refresh try2
+                //ft.detach(FragWednesday.newinstance()).attach(FragWednesday.newinstance()).commit();   refresh try3
             }
         });
-
 
         //FragmentTransaction ft = getFragmentManager().beginTransaction();
         //ft.detach(this).attach(this).commit();
@@ -165,9 +195,9 @@ public class FragWednesday extends Fragment {
 
                 //베팅 못할 시
                 if (betbet.length() == 0 || Money <= betmoney) {
-                    Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_SHORT).show();
 
-                    //베팅 시작하면 GungMa 로 intent 전환
+                //베팅 시작하면 GungMa 로 intent 전환
                 } else {
                     Intent intentA = new Intent(getActivity(), GungMa.class);  // 인텐트 준비
                     intentA.putExtra("money", Money);  // 가지고 있는 돈 발송준비
@@ -194,9 +224,9 @@ public class FragWednesday extends Fragment {
 
                 //베팅 못할 시
                 if (betbet.length() == 0 || Money <= betmoney) {
-                    Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_SHORT).show();
 
-                    //베팅 시작하면 GungMa 로 intent 전환
+                //베팅 시작하면 GungMa 로 intent 전환
                 } else {
                     Intent intentA = new Intent(getActivity(), GungMa.class);  // 인텐트 준비
                     intentA.putExtra("money", Money);  // 가지고 있는 돈 발송준비
@@ -223,9 +253,9 @@ public class FragWednesday extends Fragment {
 
                 //베팅 못할 시
                 if (betbet.length() == 0 || Money <= betmoney) {
-                    Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_SHORT).show();
 
-                    //베팅 시작하면 GungMa 로 intent 전환
+                //베팅 시작하면 GungMa 로 intent 전환
                 } else {
                     Intent intentA = new Intent(getActivity(), GungMa.class);  // 인텐트 준비
                     intentA.putExtra("money", Money);  // 가지고 있는 돈 발송준비
@@ -252,9 +282,9 @@ public class FragWednesday extends Fragment {
 
                 //베팅 못할 시
                 if (betbet.length() == 0 || Money <= betmoney) {
-                    Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "베팅할 수 없습니다", Toast.LENGTH_SHORT).show();
 
-                    //베팅 시작하면 GungMa 로 intent 전환
+                //베팅 시작하면 GungMa 로 intent 전환
                 } else {
                     Intent intentA = new Intent(getActivity(), GungMa.class);  // 인텐트 준비
                     intentA.putExtra("money", Money);  // 가지고 있는 돈 발송준비

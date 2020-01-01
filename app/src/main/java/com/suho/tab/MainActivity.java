@@ -1,33 +1,22 @@
 package com.suho.tab;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private viewPagerAdapter fragmentPagerAdapter;
 
+    public static final int REQUEST_CODE_INSERT = 1818;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void btn_Click1(View view){
         Intent InputPhoneNumber = new Intent(MainActivity.this,InputPhoneNumber.class);
-        startActivity(InputPhoneNumber);
+        startActivityForResult(InputPhoneNumber, REQUEST_CODE_INSERT);
         //show();
     }
-
+/**********
     public void refresh(){
         fragmentPagerAdapter.notifyDataSetChanged();
     }
+ **********/
+
 /*******
     void show()
     {

@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".InputPhoneNumber"/>
         <activity android:name=".GungMa"/>
-        <activity android:name=".GungMaResult"/>
+        <activity android:name=".Lucky"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

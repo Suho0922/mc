@@ -1,30 +1,43 @@
 package com.suho.tab;
 
-import android.content.Context;
+
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.ListFragment;
 
 
 public class FragMonday extends ListFragment {
 
+    public static final int REQUEST_CODE_INSERT = 101;
+
     public static FragMonday newinstance(){
         FragMonday fragMonday = new FragMonday();
         return fragMonday;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == REQUEST_CODE_INSERT){
+            String NAME = data.getExtras().getString("MoneyI");
+            String PHONE_NUMBER = data.getExtras().getString("HorseI");
+
+            adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test1), NAME, PHONE_NUMBER);
+
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            ft.detach(this).attach(this).commit();
+        }
     }
 
     ListViewAdapter adapter;
@@ -44,6 +57,7 @@ public class FragMonday extends ListFragment {
         // 세 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test3), "Jung", "010-3333-4444");
 
+        /*********
         Bundle extra = getArguments();
         if(extra != null) {
             //extra = getArguments();
@@ -52,10 +66,12 @@ public class FragMonday extends ListFragment {
 
             addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test1), NAME, PHONE_NUMBER);
         }
-
+        **********/
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
+
+    /**************************************
     @Override
     public void onPause(){
 
@@ -71,10 +87,14 @@ public class FragMonday extends ListFragment {
         super.onPause();
 
     }
+    *****************************************/
 
+    /**************
     public void addItem(Drawable icon, String title, String desc) {
         adapter.addItem(icon, title, desc) ;
     }
+    ***************/
+
 
     /************
     public void onSaveInstanceState(Bundle bundle){
@@ -88,6 +108,8 @@ public class FragMonday extends ListFragment {
         }
     }
      *************/
+
+
 
     /******************************************************
      * 혹시 모를 클릭 이벤트 처리를 위하여

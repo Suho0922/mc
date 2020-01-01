@@ -53,7 +53,7 @@
                     android:id="@+id/textViewA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2배"
+                    android:text="2배 (45%)"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +95,7 @@
                     android:id="@+id/textViewC"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3배"
+                    android:text="3배 (30%)"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +124,7 @@
                 android:id="@+id/buttonB"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@drawable/horse2"
+                android:background="@drawable/horse4"
                 android:textColor="#FFFFFF"
                 android:text="C" />
 
@@ -136,7 +136,7 @@
                     android:id="@+id/textViewB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5배"
+                    android:text="5배(18%)"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -166,7 +166,7 @@
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@drawable/horse4"
+                android:background="@drawable/horse2"
                 android:textColor="#FFFFFF"
                 android:text="D" />
 
@@ -178,7 +178,7 @@
                     android:id="@+id/textViewD"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="13배"
+                    android:text="13배(7%)"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -229,7 +229,7 @@
                     android:id="@+id/textViewEE"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="트로이목마"
+                    android:text="트로이목마(3%)"
                     android:textColor="#ffFFFFFF"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -268,17 +268,5 @@
         android:textColor="#030303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MoneyTextView" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FFC107"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/BetEditText"
-        app:layout_constraintTop_toBottomOf="@+id/BetEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

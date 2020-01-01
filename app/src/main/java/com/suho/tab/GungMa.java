@@ -1,15 +1,12 @@
 package com.suho.tab;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,18 +19,6 @@ public class GungMa extends AppCompatActivity {
     ImageView horse3;
     ImageView horse4;
     ImageView horse5;
-
-    private Animation a;
-    private Animation b;
-    private Animation c;
-    private Animation d;
-    private Animation e;
-
-    private ImageView A;
-    private ImageView B;
-    private ImageView C;
-    private ImageView D;
-    private ImageView E;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -49,13 +34,13 @@ public class GungMa extends AppCompatActivity {
         // 이기는 말
         final int WinnerHorse;
         double random = Math.random() * 100d;
-        if (random > 60d) {
+        if (random > 58d) {
             WinnerHorse = 1;
-        } else if (random > 30d) {
+        } else if (random > 28d) {
             WinnerHorse = 2;
-        } else if (random > 12d) {
+        } else if (random > 10d) {
             WinnerHorse = 3;
-        } else if (random > 2d) {
+        } else if (random > 3d) {
             WinnerHorse = 4;
         } else
             WinnerHorse = 5;

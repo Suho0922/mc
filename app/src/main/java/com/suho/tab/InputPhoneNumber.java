@@ -3,6 +3,7 @@ package com.suho.tab;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,12 +21,37 @@ public class InputPhoneNumber extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input_phone_number);
+
+        Button insertbutton = (Button) findViewById(R.id.button2);
+
+        insertbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent phoneintent= new Intent();
+
+                EditText editText1 = (EditText)findViewById(R.id.editText1);
+                EditText editText2 = (EditText)findViewById(R.id.editText2);
+
+                phoneintent.putExtra("NAME", editText1.getText().toString());
+                phoneintent.putExtra("PHONENUMBER", editText2.getText().toString());
+                setResult(RESULT_OK, phoneintent);
+                finish();
+            }
+        });
+
     }
 
     public void btn_Click2(View view) {
         EditText editText1 = (EditText)findViewById(R.id.editText1);
         EditText editText2 = (EditText)findViewById(R.id.editText2);
-        FragmentTransaction NewInfo = getSupportFragmentManager().beginTransaction();
+
+        Intent phoneintent= new Intent();
+        phoneintent.putExtra("NAME", editText1.getText().toString());
+        phoneintent.putExtra("PHONENUMBER", editText2.getText().toString());
+        setResult(RESULT_OK, phoneintent);
+        finish();
+
+        //FragmentTransaction NewInfo = getSupportFragmentManager().beginTransaction();
 
         /*********
         FragMonday InputNew = (FragMonday) getSupportFragmentManager().findFragmentById(R.id.fragmonday);
@@ -35,6 +61,7 @@ public class InputPhoneNumber extends AppCompatActivity {
         }
         **********/
 
+        /************************
         FragMonday fragment = new FragMonday();
 
         Bundle bundle = new Bundle();
@@ -44,11 +71,11 @@ public class InputPhoneNumber extends AppCompatActivity {
 
         //FragMonday tf = (FragMonday) getSupportFragmentManager().findFragmentById(R.id.fragmonday22);
         //tf.refresh();
+         ***********************/
     }
 
     public void btn_Click3(View view){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
-
 }
