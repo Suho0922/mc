@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:text="2배 (42%)"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewAA" />
 
@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:text="3배 (30%)"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="15dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewCC" />
 
@@ -138,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:text="5배(18%)"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="25dp"
+                    android:textSize="15dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewBB" />
 
@@ -180,7 +180,7 @@
                     android:layout_height="wrap_content"
                     android:text="13배(7%)"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewDD" />
 
@@ -221,7 +221,7 @@
                     android:layout_height="wrap_content"
                     android:text="30배(3%)"
                     android:textColor="#ffFFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewEE" />
 

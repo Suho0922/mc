@@ -51,11 +51,19 @@ public class FragMonday extends ListFragment {
         setListAdapter(adapter);
 
         // 첫 번째 아이템 추가.
-        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test1), "Yang", "010-1111-2222");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test1), "Yang", "010-4531-1879");
         // 두 번째 아이템 추가.
-        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test2), "Kim", "010-2222-3333");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test3), "Kim", "010-8417-7184");
         // 세 번째 아이템 추가.
-        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test3), "Jung", "010-3333-4444");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test4), "Jung", "010-1657-4813");
+        // 네 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test5), "Lee", "010-7324-8534");
+        // 다섯 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test6), "Park", "010-1275-5342");
+        // 여섯 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test7), "Yoo", "010-7241-4341");
+        // 일곱 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.ic_account_test2), "Choi", "010-6824-5167");
 
         /*********
         Bundle extra = getArguments();
